@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated login page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-container">
+        <form class="formulario-login">
+            <h2 class="formulario-title">Sign In</h2>
+            <div class="formulario-login-options">
+                <button><img class="icon" src="./icons/google.svg" /></button>
+                <button><img class="icon" src="./icons/facebook.svg" /></button>
+                <button><img class="icon" src="./icons/github.svg" /></button>
+                <button><img class="icon" src="./icons/linkedin.svg" /></button>
+            </div>
+            <p class="formulario-text">or use your email password</p>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <p class="formulario-text">Forget Your Password?</p>
+            <button class="formulario-login-button">SIGN UP</button>
+        </form>
+        <form class="formulario-signup">
+            <h2 class="formulario-signup-titulo">Craate Account</h2>
+            <div class="formulario-welcome-options">
+                <button><img class="icon" src="./icons/google.svg" alt=""></button>
+                <button><img class="icon" src="./icons/facebook.svg" alt=""></button>
+                <button><img class="icon" src="./icons/github.svg" alt=""></button>
+                <button><img class="icon" src="./icons/linkedin.svg" alt=""></button>
+            </div>
+            <p class="formulario-text-signup">or use your email for registeration</p>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="password">
+            <button class="formulario-signup-button">SIGN UP</button>
+        </form>
+        <div class="separador separador__izquierdo">
+            <h2 class="separador-titulo">Hello, Friend!</h2>
+            <p class="separador-parrafo">Register with your personal details to use all of site features</p>
+            <Button class="separador-button">Sign up</Button>
+        </div>
+    </div>
+
+    </div>
+</body>
+<script>
+    const SEND_SEPARADOR_TO_RIGHT = "separador__derecho"
+    const SEND_SEPARADOR_TO_LEFT = "separador__izquierdo"
+    const LOGIN = "login"
+    const SIGNUP = "signup"
+    let state = LOGIN
+    const separadorContainer = document.querySelector(".separador")
+    const separadorTitulo = document.querySelector(".separador-titulo")
+    const separadorParrafo = document.querySelector(".separador-parrafo")
+    const buttonSeparador = document.querySelector(".separador-button")
+
+    buttonSeparador.addEventListener("click", () => {
+        const titleContent = state === LOGIN
+            ? "Hello, Friend!"
+            : "Welcome Back!"
+        const paragraphContent = state === LOGIN
+            ? "Register with your personal detailsr to use all of site features"
+            : "Enter your personal details to use all of site features"
+        const buttonContent = state === LOGIN
+            ? "SIGN UP"
+            : "SIGN IN"
+        if (state === LOGIN) {
+            separadorContainer.classList.add(SEND_SEPARADOR_TO_RIGHT)
+            separadorContainer.classList.remove(SEND_SEPARADOR_TO_LEFT)
+            separadorTitulo.textContent = titleContent
+            separadorParrafo.textContent = paragraphContent
+            buttonSeparador.textContent = buttonContent
+            state = SIGNUP
+            return
+        }
+        if (state === SIGNUP) {
+            separadorContainer.classList.add(SEND_SEPARADOR_TO_LEFT)
+            separadorContainer.classList.remove(SEND_SEPARADOR_TO_RIGHT)
+            separadorTitulo.textContent = titleContent
+            separadorParrafo.textContent = paragraphContent
+            buttonSeparador.textContent = buttonContent
+            state = LOGIN
+        }
+    })
+
+</script>
+
+</html>
