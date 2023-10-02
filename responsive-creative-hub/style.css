@@ -1,0 +1,171 @@
+:root{
+    --white: #fff;
+    --background: #F5F8FF;
+    --text-light: #4C75D3;
+    --title-color: #0D1339;
+    --card-gray: #e0e0e0;
+    --title-font-size: 1rem;
+    --subtitle-font-size: 0.9rem;
+    --text-font-size: 0.7rem;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 80vh;
+    background-color: var(--background);
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(20% 20% at -2% 7%, #ACFF002B 27%, #073AFF00 100%),
+        radial-gradient(30% 20% at 32% 5%, #009AFF6E 1%, #FF000000 99%),
+        radial-gradient(50% 20% at 98% 5%, #CBFF0040 33%, #073AFF00 100%),
+        radial-gradient(70% 91% at 13% 69%, #FF8C00B0 1%, #FF000000 99%),
+        radial-gradient(100% 70% at 62% 53%, #FF00D257 1%, #FF000000 99%),
+        radial-gradient(20% 20% at 98% 95%, #ACFF0045 33%, #073AFF00 100%);
+    color: var(--title-color);
+}
+
+.info-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+.info-content h2{
+    align-self: flex-start;
+    font-size: var(--title-font-size);
+    margin-bottom: 0.5rem;
+}
+.info-content p{
+    font-size: var(--text-font-size);
+}
+
+.info-light-text{
+    color: var(--text-light);
+}
+
+/* Tableta*/
+@media screen and (min-width: 720px)  {
+    :root {
+        --title-font-size: 1.5rem;
+        --subtitle-font-size: 1.1rem;
+        --text-font-size: 0.9rem;
+    }
+    
+    .container{
+        width: 75vw;
+        height: 80vh;
+    }
+
+    
+    
+}
+/* PC*/
+@media screen and (min-width: 1280px)  {
+    :root {
+        --title-font-size: 2rem;
+        --subtitle-font-size: 1.5rem;
+        --text-font-size: 1.1rem;
+    }
+    .container{
+        flex-direction: row;
+        width: 65vw;
+        height: 70vh;
+    }
+    
+    .info{
+        width: 50%;
+        height: 100%;
+    }
+    .info-content{
+        background-color: var(--background);
+        margin: 1.5rem;
+    }
+        
+}
+
+/* FORMULARIO */
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    padding: 1rem;
+}
+textarea{
+    resize: none;
+    padding: 0.3rem;
+}
+
+.form-container input{
+    height: 1.5rem;
+    width: 100%;
+    padding: 0.8rem  0rem 0.8rem 0.3rem;
+}
+.form-container-button{
+    align-self: flex-end;
+    font-family: var(--subtitle-font-size);
+    font-size: var(--text-font-size);
+    background-image: linear-gradient(to right, #3f80d4, #4578e3, #5c6dee, #7b5df3, #9e43f2);
+    color: #fff;
+    height: 1.5rem;
+    width: 6.5rem;
+    border-radius: 0.3rem; 
+    border: none;
+    margin-top: 0.6rem;
+}
+.container-titulo{
+    font-size: var(--title-font-size);
+    
+}
+.container-subtitulo{
+    font-size: var(--subtitle-font-size);
+}
+.container-titulo, .container-subtitulo{
+    margin-top: 0.6rem;
+    margin-bottom: 0.3rem;
+}
+
+
+/* Tableta*/
+@media screen and (min-width: 720px)  {
+    
+}
+/* PC*/
+@media screen and (min-width: 1280px)  {
+    .form-container{
+        width: 50%;
+        height: 100%;
+    }
+    .form-container-button{
+      height: 2.5rem;
+      width: 8rem; 
+    } 
+    .container-titulo, .container-subtitulo{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+        
+}
