@@ -102,7 +102,13 @@ nav{
 .menu_anchors{
   display: flex;
   font-family: var(--second-font);
-  transition: 1s all;
+  transition: 1s right;
+}
+.menu_anchors a{
+  color: #000;
+}
+.menu_anchors a:visited{
+  color: #000;
 }
 .menu-icon{
   display: none;
@@ -123,7 +129,18 @@ li{
 }
 
 /*=============== HOME ===============*/
-
+main{
+  height: 30rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: sandybrown;
+}
+.home_container{
+  width: 1152px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 
 /* Swiper class */
 
@@ -138,8 +155,7 @@ li{
     display: inline;
   }
   .menu_anchors{
-    visibility: hidden;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     top: 0; 
     right: -100vw;
@@ -154,7 +170,6 @@ li{
     display: inline;
   }
   .show-menu{
-    visibility: visible;
     right: 0;
   }
 
