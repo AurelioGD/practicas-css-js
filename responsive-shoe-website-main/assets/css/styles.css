@@ -48,12 +48,16 @@
   padding: 0;
   margin: 0;
 }
+html{
+  width: 100vw;
+}
 
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  width: 100vw;
 }
 
 ul {
@@ -81,6 +85,7 @@ img {
   height: 4rem;
   display: flex;
   justify-content: center;
+  width: 100vw;
 }
 
 nav{
@@ -208,8 +213,8 @@ main{
 
 .swiper-background{
   position: absolute;
-  width: 90%;
-  height: 90%;
+  width: 26rem;
+  height: 26rem;
   border-radius: 50%;
   top: 0;
   left: 0;
@@ -221,7 +226,9 @@ main{
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 570px) {
-
+  main{
+    flex-direction: column;
+  }
 }
 /* For medium devices */
 @media screen and (max-width: 1018px) {
@@ -246,29 +253,36 @@ main{
   .show-menu{
     right: 0;
   }
+  .pagination-container{
+    width: 900px;
+  }
+  
 }
 /* For large devices */
-@media screen and (max-width: 1145px) {
-  body{
-    background-color: rgb(187, 211, 237);
+@media screen and (max-width: 1152px) {
+  .home_titulo_parrafo{
+    margin-top: 1.5rem;
   }
-  .home_container{
-    .home_titulo{
-      color: var(--black-color);
-      font-size: 1.5rem;
-    }
-    .home_titulo_subtitulo{
-     font-size: var(--biggest-font-size);
-     color: var(--black-color);
-     line-height: 4.5rem;
-    }
-    .home_titulo_parrafo{
-      margin-top: 1.5rem;
-    }
+  .home_titulo_subtitulo{
+    font-size: var(--biggest-font-size);
+    color: var(--black-color);
+   }
+  .home_titulo{
+    color: var(--black-color);
+    font-size: 1.5rem;
   }
-  .swiper{
-    width: 40%;
+  main{
+    height: 25rem;
+    width: 900px;
   }
+  .swiper-background{
+    width: 20rem;
+    height: 20rem;
+  }
+  .social{
+    position: fixed;
+    right: 1.5rem;
+   }
 }
 
 @media screen and (max-width: 1225px) {
